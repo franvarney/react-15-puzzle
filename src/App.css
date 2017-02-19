@@ -1,0 +1,110 @@
+.puzzle {
+  display: block;
+  height: 100%;
+  margin: 25px auto;
+  max-height: 600px;
+  max-width: 600px;
+  position: relative;
+  width: 100%;
+}
+
+header > h1 {
+  font-weight: 700;
+}
+
+header,
+.moves {
+  display: inline-block;
+  color: #3B3A40;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.moves {
+  float: right;
+  font-size: 12px;
+  margin-top: 45px;
+}
+
+.grid {
+  align-content: flex-end;
+  align-items: flex-start;
+  background-color: #D5D2E5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0 30px;
+  padding: 5px;
+  position: relative;
+}
+
+.tile {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 4.85em;
+  min-height: 25%;
+  min-width: 25%;
+  padding: 3px;
+  position: relative;
+  text-align: center;
+}
+
+.tile > span {
+  background-color: #9896A4;
+  color: #FFF;
+  display: block;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 66px;
+  line-height: 2.2em;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.tile > span:hover {
+  background-color: #76757F;
+  transition: background-color 200ms ease-in;
+}
+
+.tile.empty {
+  background-color: #D5D2E5;
+  cursor: initial;
+}
+
+.tile.empty > span:hover {
+  background-color: #9896A4;
+}
+
+.other {
+
+}
+
+.message {
+  color: #3B3A40;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+button {
+  background-color: #ECE9FF;
+  border: 0;
+  color: #3B3A40;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding: 10px 15px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #D5D2E5;
+  transition: background-color 200ms ease-in;
+}
+
+button:focus {
+  outline: none;
+}

@@ -3,8 +3,9 @@ import Shuffle from 'shuffle-array';
 
 import './App.css';
 
-const SIZE = 4;
-const TILES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, null];
+const SIZE = 3;
+const TILES = Array(SIZE * SIZE).fill().map(Function.call, (n) => ++n);
+TILES[TILES.length - 1] = null;
 const FINAL = TILES.slice();
 
 class App extends Component {
@@ -89,7 +90,7 @@ class App extends Component {
     return (
       <div className="container puzzle">
         <header>
-          <h1>15 Puzzle</h1>
+          <h1>{SIZE * SIZE - 1} Puzzle</h1>
         </header>
         <p className="moves">Moves: {this.state.moves}</p>
         <div className="row grid">
@@ -106,8 +107,13 @@ class App extends Component {
   wrapTiles(tiles) {
     return tiles.map((tile='', key) => {
       const classes = tile ? 'tile' : 'tile empty';
+      const size = 100 / SIZE;
       return (
-        <div key={key} className={classes} onClick={this.handleTileClick.bind(this)}>
+        <div
+          key={key} 
+          className={classes}
+          onClick={this.handleTileClick.bind(this)}
+          style={{ minWidth: `${size}%`, minHeight: `${size}%` }}>
           <span id={key}>{tile}</span>
         </div>
       );

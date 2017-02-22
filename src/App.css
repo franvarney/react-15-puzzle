@@ -82,6 +82,17 @@ header,
   color: #3B3A40;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  margin-right: 10px;
+}
+
+.other > span {
+  float: right;
+  line-height: 49px;
+}
+
+.other > span button {
+  margin: 0px 5px;
+  text-decoration: none;
 }
 
 button {
@@ -93,6 +104,7 @@ button {
   float: right;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  margin-left: 10px;
   padding: 10px 15px;
   text-decoration: underline;
   text-transform: uppercase;
@@ -105,4 +117,8 @@ button:hover {
 
 button:focus {
   outline: none;
+}
+
+button:disabled {
+  background-color: grey;
 }
